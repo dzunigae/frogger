@@ -20,6 +20,7 @@ public abstract class Renderable {
     public Renderable(int coordenadaY, String nombreArchivoImagen) {
         this.coordenadaY = coordenadaY;
         this.nombreArchivoImagen = nombreArchivoImagen;
+        this.imagen = null;
     }
     
     public abstract void moverY();
@@ -27,6 +28,14 @@ public abstract class Renderable {
     public void cargarImagen(){
         ImageIcon iconoImagen = new ImageIcon(this.nombreArchivoImagen);
         this.imagen = iconoImagen.getImage();
+    }
+    
+    public int getCoordenadaY(){
+        return this.coordenadaY;
+    }
+    
+    public Image getImagen(){
+        return this.imagen;
     }
     
     protected int coordenadaY;

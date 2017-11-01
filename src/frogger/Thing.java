@@ -18,6 +18,10 @@ public abstract class Thing extends Renderable{
         this.coordenadaX = coordenadaX;
     }
     
+    public int getCoordenadaX(){
+        return this.coordenadaX;
+    }
+    
     protected Rectangle areaDeEfecto;
     protected int coordenadaX;
 }
